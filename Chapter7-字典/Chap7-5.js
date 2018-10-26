@@ -1,6 +1,6 @@
-load("Dictionary.js");
+var Dictionary = require("./Dictionary.js");
 var pbook = new Dictionary();
-pbook.add("Raymond","123");
+pbook.add("Raymond", "123");
 pbook.add("David", "345");
 pbook.add("Cynthia", "456");
 pbook.add("Mike", "723");
