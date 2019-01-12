@@ -35,8 +35,8 @@ function put(key, data) {
    var index = 0;
    if (this.table[pos][index] == undefined) {
       this.table[pos][index] = data;
+      ++index;
    }
-   ++index;
    else {
       while (this.table[pos][index] != undefined) {
          ++index;
@@ -121,8 +121,8 @@ function get(key) {
    if (this.table[pos][index] = key) {
       return this.table[pos][index+1];
    }
-   index += 2;
    else {
+      index += 2;
       while (this.table[pos][index] != key) {
          index += 2;
       }

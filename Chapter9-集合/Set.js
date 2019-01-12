@@ -77,7 +77,7 @@ function subset(set) {
       return false;
    }
    else {
-      for each (var member in this.dataStore) {
+      for(var member in this.dataStore) {
          if (!set.contains(member)) {
             return false;
          }
