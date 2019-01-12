@@ -2,7 +2,7 @@ function Person(first, middle, last) {
     this.first = first;
     this.middle = middle;
     this.last = last;
-    this.initials = initials;
+    this.initials = initials.bind(this);
 }
 
 function initials() {
