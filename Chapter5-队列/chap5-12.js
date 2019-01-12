@@ -18,17 +18,15 @@ function binSearch(arr, data) {
 
 var nums = [];
 for (var i = 0; i < 100; ++i) {
-   nums[i] = Math.floor(Math.random() * 101);
+   nums[i] = i;
 }
-insertionsort(nums);
-dispArr(nums);
-print();
-putstr("Enter a value to search for: ");
-var val = parseInt(readline());
+
+var val = 88;
+
 var retVal = binSearch(nums, val);
 if (retVal >= 0) {
-   print("Found " + val + " at position " + retVal);
+   console.log("Found " + val + " at position " + retVal);
 }
 else {
-   print(val + " is not in array.");
+   console.log(val + " is not in array.");
 }
