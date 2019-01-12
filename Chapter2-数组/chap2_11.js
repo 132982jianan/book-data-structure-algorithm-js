@@ -6,10 +6,9 @@ for (var col = 0; col < grades.length; ++col) {
       total += grades[row][col];
    }
 
-
    average = total / grades[col].length;
-   print("Test " + parseInt(col+1) + " average: " + 
-         average.toFixed(2));
+   console.log("Test " + parseInt(col+1) +
+       " average: " + average.toFixed(2));
    total = 0;
    average = 0.0;
 }

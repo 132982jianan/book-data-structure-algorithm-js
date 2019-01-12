@@ -1,7 +1,7 @@
 function weekTemps() {
     this.dataStore = [];
-    this.add = add;
-    this.average = average;
+    this.add = add.bind(this);
+    this.average = average.bind(this);
 }
 
 function add(temp) {
@@ -16,6 +16,7 @@ function average() {
     return total / this.dataStore.length;
 }
 
+//
 var thisWeek = new weekTemps();
 thisWeek.add(52);
 thisWeek.add(55);
@@ -25,4 +26,8 @@ thisWeek.add(55);
 thisWeek.add(50);
 thisWeek.add(52);
 thisWeek.add(49);
-print(thisWeek.average()); // displays 54.875
+console.log(thisWeek.average());
+
+/**
+ 54.875
+ */

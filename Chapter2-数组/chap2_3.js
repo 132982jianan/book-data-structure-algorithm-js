@@ -1,6 +1,14 @@
 var names = ["David", "Mike", "Cynthia", "Raymond", "Clayton", "Mike", "Jennifer"];
+
 var name = "Mike";
+
 var firstPos = names.indexOf(name);
-print("First found " + name + " at position " + firstPos);
+console.log("First found " + name + " at position " + firstPos);
+
 var lastPos = names.lastIndexOf(name);
-print("Last found " + name + " at position " + lastPos);
+console.log("Last found " + name + " at position " + lastPos);
+
+/**
+ First found Mike at position 1
+ Last found Mike at position 5
+ */

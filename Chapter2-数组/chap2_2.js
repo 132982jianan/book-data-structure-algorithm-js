@@ -1,10 +1,16 @@
 var names = ["David", "Cynthia", "Raymond", "Clayton", "Jennifer"];
-putstr("Enter a name to search for: ");
-var name = readline();
+
+//
+var name = "David";
+
 var position = names.indexOf(name);
+
 if (position >= 0) {
-    print("Found " + name + " at position " + position);
+    console.log("Found " + name + " at position " + position);
+}else {
+    console.log(name + " not found in array.");
 }
-else {
-    print(name + " not found in array.");
-}
+
+/**
+ Found David at position 0
+ */
