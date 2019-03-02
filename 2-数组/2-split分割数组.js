@@ -5,20 +5,20 @@ var words = sentence.split(" ");
 
 // 
 for (var i = 0; i < words.length; ++i) {
-    console.log("word " + i + ": " + words[i]);
+    console.log("world ", i, " =", words[i]);
 }
 
 /**
- word 0: the
- word 1:
- word 2:
- word 3:
- word 4: quick
- word 5: brown
- word 6: fox
- word 7: jumped
- word 8: over
- word 9: the
- word 10: lazy
- word 11: dog
+ world  0  = the
+ world  1  =
+ world  2  =
+ world  3  =
+ world  4  = quick
+ world  5  = brown
+ world  6  = fox
+ world  7  = jumped
+ world  8  = over
+ world  9  = the
+ world  10  = lazy
+ world  11  = dog
  */
