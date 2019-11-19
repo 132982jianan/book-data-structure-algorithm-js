@@ -1,6 +1,3 @@
-/**
- * 浮点精度
- */
 var arr = [1,2,3,1];
 
 function add(arr){
@@ -11,4 +8,8 @@ function add(arr){
    return ret;
 }
 
-console.log("\n精度到小数5位", (add(arr)/99).toFixed(5));
+console.log("精度到小数5位", (add(arr)/99).toFixed(5));
+
+/**
+ 精度到小数5位 0.07071
+ */

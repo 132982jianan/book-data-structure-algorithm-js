@@ -9,7 +9,6 @@ function initials() {
     return this.first[0] + this.middle[0] + this.last[0];
 }
 
-//
 var aPerson = new Person("John", "Quincy", "Public");
 console.log("First name: " + aPerson.first);
 console.log("Middle name: " + aPerson.middle);
