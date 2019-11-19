@@ -1,4 +1,4 @@
-load("bst.js");
+var BST = require("./bst.js");
 var grades = genArray(100);
 prArray(grades);
 var gradedistro = new BST();

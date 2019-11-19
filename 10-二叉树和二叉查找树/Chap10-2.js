@@ -1,4 +1,4 @@
-load("bst.js");
+var BST = require("./bst.js");
 var nums = new BST();
 nums.insert(23);
 nums.insert(45);

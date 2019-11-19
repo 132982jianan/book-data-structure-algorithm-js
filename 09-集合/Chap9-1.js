@@ -1,4 +1,4 @@
-load("set.js");
+var Set = require("./Set.js");
 var names = new Set();
 names.add("David");
 names.add("Jennifer");

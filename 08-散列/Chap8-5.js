@@ -1,4 +1,5 @@
-load("HashTable.js");
+var HashTable = require("./HashTable.js");
+
 var hTable = new HashTable();
 hTable.buildChains();
 var someNames = ["David", "Jennifer", "Donnie", "Raymond",

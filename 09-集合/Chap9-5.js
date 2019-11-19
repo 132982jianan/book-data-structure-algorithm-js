@@ -1,4 +1,4 @@
-load("set.js");
+var Set = require("./Set.js");
 var cis = new Set();
 var it = new Set();
 cis.add("Clayton");

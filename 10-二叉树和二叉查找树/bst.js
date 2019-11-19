@@ -154,7 +154,7 @@ function removeNode(node, data) {
    }
 }
       
-   
+module.exports = BST;
 
 var nums = new BST();
 nums.insert(23);

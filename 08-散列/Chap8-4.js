@@ -13,7 +13,7 @@ function genStuData(arr) {
    }
 }
 
-load("HashTable.js");
+var HashTable = require("./HashTable.js");
 var numStudents = 10;
 var arrSize = 97;
 var idLen = 9;

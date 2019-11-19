@@ -40,7 +40,7 @@ function dfs(v) {
    if (this.adj[v] != undefined) { 
       print("Visited vertex: " + v);
    }
-   for each (var w in this.adj[v]) {
+   for(var w in this.adj[v]) {
       if (!this.marked[w]) {
          this.dfs(w);
       }
@@ -49,7 +49,6 @@ function dfs(v) {
 
 // program to test dfs() function
 
-load("Graph.js");
 g = new Graph(5);
 g.addEdge(0,1);
 g.addEdge(0,2);
