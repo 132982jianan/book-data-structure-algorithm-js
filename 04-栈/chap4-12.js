@@ -12,7 +12,7 @@ var elapsed = stop - start;
 console.log(nums.toString());
 
 console.log("Elapsed time for the bubble sort on " +
-      numElements + " elements is: " + elapsed + " milliseconds.\n\n\n");
+    numElements + " elements is: " + elapsed + " milliseconds.\n\n\n");
 
 nums.setData();
 start = new Date().getTime();
@@ -22,7 +22,7 @@ console.log(nums.toString());
 stop = new Date().getTime();
 elapsed = stop - start;
 console.log("Elapsed time for the selection sort on " +
-      numElements + " elements is: " +  elapsed + " milliseconds.\n\n\n");
+    numElements + " elements is: " + elapsed + " milliseconds.\n\n\n");
 
 nums.setData();
 start = new Date().getTime();
@@ -32,4 +32,4 @@ console.log(nums.toString());
 stop = new Date().getTime();
 elapsed = stop - start;
 console.log("Elapsed time for the insertion sort on " +
-       numElements + " elements is: " + elapsed + " milliseconds.\n\n\n");
+    numElements + " elements is: " + elapsed + " milliseconds.\n\n\n");

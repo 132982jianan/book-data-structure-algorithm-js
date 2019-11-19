@@ -2,13 +2,13 @@ function CArray(numElements) {
     this.dataStore = [];
     this.pos = 0;
     this.numElements = numElements;
-    this.insert = insert;
-    this.toString = toString;
-    this.clear = clear;
-    this.setData = setData;
-    this.bubblesort = bubblesort;
-    this.selectionsort = selectionsort;
-    this.insertionsort = insertionsort;
+    this.insert = insert.bind(this);
+    this.toString = toString.bind(this);
+    this.clear = clear.bind(this);
+    this.setData = setData.bind(this);
+    this.bubblesort = bubblesort.bind(this);
+    this.selectionsort = selectionsort.bind(this);
+    this.insertionsort = insertionsort.bind(this);
 
     for (var i = 0; i < numElements; ++i) {
         this.dataStore[i] = i;
@@ -17,8 +17,7 @@ function CArray(numElements) {
 
 function setData() {
     for (var i = 0; i < this.numElements; ++i) {
-        this.dataStore[i] = Math.floor(Math.random() *
-            (this.numElements+1));
+        this.dataStore[i] = Math.floor(Math.random() * (this.numElements + 1));
     }
 }
 
@@ -47,11 +46,11 @@ function bubblesort() {
     var numElements = this.dataStore.length;
     var temp;
     for (var outer = numElements; outer >= 2; --outer) {
-        for (var inner = 0; inner <= outer-1; ++inner) {
-            if (this.dataStore[inner] > this.dataStore[inner+1]) {
+        for (var inner = 0; inner <= outer - 1; ++inner) {
+            if (this.dataStore[inner] > this.dataStore[inner + 1]) {
                 temp = this.dataStore[inner];
-                this.dataStore[inner] = this.dataStore[inner+1];
-                this.dataStore[inner+1] = temp;
+                this.dataStore[inner] = this.dataStore[inner + 1];
+                this.dataStore[inner + 1] = temp;
             }
         }
     }
@@ -59,10 +58,10 @@ function bubblesort() {
 
 function selectionsort() {
     var min, temp;
-    for (var outer = 0; outer <= this.dataStore.length-2; ++outer) {
+    for (var outer = 0; outer <= this.dataStore.length - 2; ++outer) {
         min = outer;
         for (var inner = outer + 1;
-             inner <= this.dataStore.length-1; ++inner) {
+             inner <= this.dataStore.length - 1; ++inner) {
             if (this.dataStore[inner] < this.dataStore[min]) {
                 min = inner;
             }
@@ -75,11 +74,11 @@ function selectionsort() {
 
 function insertionsort() {
     var temp, inner;
-    for (var outer = 1; outer <= this.dataStore.length-1; ++outer) {
+    for (var outer = 1; outer <= this.dataStore.length - 1; ++outer) {
         temp = this.dataStore[outer];
         inner = outer;
-        while (inner > 0 && (this.dataStore[inner-1] >= temp)) {
-            this.dataStore[inner] = this.dataStore[inner-1];
+        while (inner > 0 && (this.dataStore[inner - 1] >= temp)) {
+            this.dataStore[inner] = this.dataStore[inner - 1];
             --inner;
         }
         this.dataStore[inner] = temp;
