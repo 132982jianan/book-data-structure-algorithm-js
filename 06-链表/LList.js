@@ -5,11 +5,11 @@ function Node(element) {
 
 function LList() {
    this.head = new Node("head");
-   this.find = find;
-   this.insert = insert;
-   this.display = display;
-   this.findPrevious = findPrevious;
-   this.remove = remove;
+   this.find = find.bind(this);
+   this.insert = insert.bind(this);
+   this.display = display.bind(this);
+   this.findPrevious = findPrevious.bind(this);
+   this.remove = remove.bind(this);
 }
 
 function remove(item) {
@@ -61,5 +61,3 @@ cities.display();
 console.log();
 cities.remove("Carlisle");
 cities.display();
-
-   
