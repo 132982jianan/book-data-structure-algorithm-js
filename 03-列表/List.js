@@ -1,30 +1,27 @@
-/**
- * 列表封装
- * @constructor
- */
+// 列表
 function List() {
     this.listSize = 0;
     this.pos = 0;
     this.dataStore = [];
-    this.clear = clear.bind(this);;
-    this.find = find.bind(this);;
-    this.toString = toString.bind(this);;
-    this.insert = insert.bind(this);;
-    this.append = append.bind(this);;
-    this.remove = remove.bind(this);;
-    this.front = front.bind(this);;
-    this.end = end.bind(this);;
-    this.prev = prev.bind(this);;
-    this.next = next.bind(this);;
-    this.length = length.bind(this);;
-    this.currPos = currPos.bind(this);;
-    this.moveTo = moveTo.bind(this);;
-    this.getElement = getElement.bind(this);;
+    this.clear = clear.bind(this);
+    this.find = find.bind(this);
+    this.toString = toString.bind(this);
+    this.insert = insert.bind(this);
+    this.append = append.bind(this);
+    this.remove = remove.bind(this);
+    this.front = front.bind(this);
+    this.end = end.bind(this);
+    this.prev = prev.bind(this);
+    this.next = next.bind(this);
+    this.length = length.bind(this);
+    this.currPos = currPos.bind(this);
+    this.moveTo = moveTo.bind(this);
+    this.getElement = getElement.bind(this);
     this.displayList = displayList.bind(this);
 }
 
 function displayList() {
-    for(this.front(); this.currPos() < this.length(); this.pos++){
+    for (this.front(); this.currPos() < this.length(); this.pos++) {
         console.log(this.getElement());
     }
 }
@@ -50,13 +47,13 @@ function length() {
 }
 
 function prev() {
-    if(this.pos > 0){
+    if (this.pos > 0) {
         --this.pos;
     }
 }
 
 function next() {
-    if(this.pos < this.listSize - 1){
+    if (this.pos < this.listSize - 1) {
         ++this.pos;
     }
 }
@@ -71,7 +68,7 @@ function append(element) {
 
 function insert(element, after) {
     var insertPos = this.find(after);
-    if(insertPos > -1){
+    if (insertPos > -1) {
         this.dataStore.splice(insertPos + 1, 0, element);
         ++this.listSize;
         return true;
@@ -97,7 +94,7 @@ function find(element) {
 function remove(element) {
     var foundAt = this.find(element);
     if (foundAt > -1) {
-        this.dataStore.splice(foundAt,1);
+        this.dataStore.splice(foundAt, 1);
         --this.listSize;
         return true;
     }
