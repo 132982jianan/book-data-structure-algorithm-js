@@ -20,16 +20,16 @@ function makeChange(origAmt, coins) {
 
 function showChange(coins) {
     if (coins[3] > 0) {
-        print("Number of quarters - " + coins[3] + " - " + coins[3] * .25);
+        console.log("Number of quarters - " + coins[3] + " - " + coins[3] * .25);
     }
     if (coins[2] > 0) {
-        print("Number of dimes - " + coins[2] + " - " + coins[2] * .10);
+        console.log("Number of dimes - " + coins[2] + " - " + coins[2] * .10);
     }
     if (coins[1] > 0) {
-        print("Number of nickels - " + coins[1] + " - " + coins[1] * .05);
+        console.log("Number of nickels - " + coins[1] + " - " + coins[1] * .05);
     }
     if (coins[0] > 0) {
-        print("Number of pennies - " + coins[0] + " - " + coins[0] * .01);
+        console.log("Number of pennies - " + coins[0] + " - " + coins[0] * .01);
     }
 }
 
