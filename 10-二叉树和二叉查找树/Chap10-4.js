@@ -7,14 +7,13 @@ nums.insert(37);
 nums.insert(3);
 nums.insert(99);
 nums.insert(22);
-inOrder(nums.root);
-print("\n");
-putstr("Enter a value to search for: ");
-var value = parseInt(readline());
+
+nums.inOrder(nums.root);
+
+var value = 16;
 var found = nums.find(value);
 if (found != null) {
-   print("Found " + value + " in the BST.");
-}
-else {
-   print(value + " was not found in the BST.");
+    console.log("Found " + value + " in the BST.");
+} else {
+    console.log(value + " was not found in the BST.");
 }

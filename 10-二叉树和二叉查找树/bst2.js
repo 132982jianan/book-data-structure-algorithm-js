@@ -71,13 +71,12 @@ function postOrder(node) {
    if (!(node == null)) {
       postOrder(node.left);
       postOrder(node.right);
-      putstr(node.show() + " ");
+      console.log(node.show() + " ");
    }
 }
 
 function getmin() {
    var current = this.root;
-   print("debug: " + current.data);
    while (!(current.left == null)) {
       current = current.left;
    }
@@ -153,3 +152,5 @@ function removeNode(node, data) {
       return node;
    }
 }
+
+module.exports = BST;
