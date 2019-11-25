@@ -61,3 +61,14 @@ cities.display();
 console.log();
 cities.remove("Carlisle");
 cities.display();
+
+/**
+ Conway
+ Russellville
+ Carlisle
+ Alma
+
+ Conway
+ Russellville
+ Alma
+ */
