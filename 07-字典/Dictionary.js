@@ -22,7 +22,8 @@ function remove(key) {
 
 function showAll() {
     // var key of xxx_arr 直接获取值,而不用索引
-    for (var key of Object.keys(this.datastore).sort()) {
+    var keys_list = Object.keys(this.datastore).sort();
+    for (var key of keys_list) {
         console.log(key + " -> " + this.datastore[key]);
     }
 }
